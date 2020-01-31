@@ -2,6 +2,7 @@ package Vista;
 
 import Controlador.controlador_articulo;
 import Modelo.Articulo;
+import java.util.ArrayList;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,7 +22,7 @@ public class Producto extends javax.swing.JFrame {
     public Producto() {
         initComponents();
         Articulo nuevoArticulo = new Articulo();
-        controlador_articulo new controlador_articulo();
+        
     }
 
   
@@ -42,6 +43,7 @@ public class Producto extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +58,11 @@ public class Producto extends javax.swing.JFrame {
         agregarboton.setText("Agregar");
 
         listatxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        listatxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listatxtActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Limpiar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +83,8 @@ public class Producto extends javax.swing.JFrame {
 
         jLabel5.setText("Descripcion:");
 
+        jButton2.setText("Actualizar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -92,8 +101,11 @@ public class Producto extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(agregarboton)
                                 .addGap(50, 50, 50)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(149, 149, 149)
                                         .addComponent(jLabel2))))
@@ -144,7 +156,8 @@ public class Producto extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agregarboton)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addGap(36, 36, 36))
         );
 
@@ -168,12 +181,18 @@ public class Producto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void preciotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preciotxtActionPerformed
-        // TODO add your handling code here:
+        ArrayList<articulo> listaNombre = new ArrayList<>();
+        
+        
     }//GEN-LAST:event_preciotxtActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void listatxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listatxtActionPerformed
+        
+    }//GEN-LAST:event_listatxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,6 +232,7 @@ public class Producto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregarboton;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

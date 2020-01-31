@@ -13,5 +13,7 @@ public class controlador_articulo {
         
         Connection ps = conexion.getConxion();
     }
-    
+    public void actualizar(){
+        String queryUpdate = "update articulos set nombre=? where articulo=?";
+    }
 }
