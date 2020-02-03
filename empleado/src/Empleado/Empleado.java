@@ -1,7 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Empleado;
 
-public abstract class Empleado {
-    private String nombre;
-    private String apellido;
+/**
+ *
+ * @author antho
+ */
+public abstract class  Empleado {
+    private String nombre,apellido;
     private int ci;
 
     public String getNombre() {
@@ -28,13 +37,15 @@ public abstract class Empleado {
         this.ci = ci;
     }
 
+    public Empleado() {
+    }
+
     public Empleado(String nombre, String apellido, int ci) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.ci = ci;
     }
-    public  abstract double calcular_ingresos();
-        
     
+    public abstract double calcular_ingresos();
     
-    }
+}
