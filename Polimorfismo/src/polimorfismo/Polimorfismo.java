@@ -7,7 +7,7 @@ public class Polimorfismo {
     public static void main(String[] args) {
         
         
-        Retiros r=new Retiros(10, 100000);
+        Retiros r=new Retiros(10, 17034245);
         
         System.out.println("Cuenta # "+r.ObtenCuenta());
         
@@ -23,5 +23,6 @@ public class Polimorfismo {
         
         
     }
+    
     
 }
