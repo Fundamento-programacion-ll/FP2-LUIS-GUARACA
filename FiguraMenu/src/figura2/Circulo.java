@@ -25,6 +25,10 @@ public class Circulo extends Punto {
     public int getRadio() {
         return radio;
     }
+    
+    public double area(){
+        return 0;
+    }
 
     public void setRadio(int radio) {
         this.radio = radio;
